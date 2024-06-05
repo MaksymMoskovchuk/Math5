@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Обчислення суми двох чисел</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Обчислення суми двох чисел</h1>
+
+<form id="sumForm">
+    <label for="number1">Число 1:</label>
+    <input type="number" id="number1" name="number1" required><br><br>
+
+    <label for="number2">Число 2:</label>
+    <input type="number" id="number2" name="number2" required><br><br>
+
+    <input type="button" value="Обчислити суму" onclick="calculateSum()">
+</form>
+
+<script>
+function calculateSum() {
+    var number1 = parseFloat(document.getElementById("number1").value);
+    var number2 = parseFloat(document.getElementById("number2").value);
+    var sum = number1 + number2;
+    
+    // Display the sum in a dialog window
+    alert("Сума чисел: " + sum);
+    
+    // Optionally, you can display the sum in a separate input field within the same form
+    // document.getElementById("sumResult").value = sum;
+}
+</script>
+</body>
+</html>
